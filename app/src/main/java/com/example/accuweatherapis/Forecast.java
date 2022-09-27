@@ -22,7 +22,7 @@ public class Forecast {
     }
 
     public void setDate(String date) {
-        this.date = date;
+        this.date = date.substring(0,10);
     }
 
     public String getValue() {

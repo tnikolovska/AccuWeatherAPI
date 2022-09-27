@@ -16,8 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
-
-
+import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -35,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         new FetchForecastDetails().execute(forecastUrl);
         Log.i(TAG, "onCreate: forecastUrl: " + forecastUrl);
 
+       /* TextView t2 = findViewById(R.id.moblink);
+        t2.setMovementMethod(LinkMovementMethod.getInstance());*/
 
     }
 
@@ -139,5 +140,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return null;
     }
+
+
 
 }

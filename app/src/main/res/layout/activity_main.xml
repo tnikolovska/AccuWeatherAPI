@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="5 Дневна Прогноза на Дневни Вредности на Индекси за Артритис, Мигрена и Синуси"
         android:textSize="23sp"
-        android:textColor="@color/colorOrange"/>
+        android:textColor="@color/purple_500"/>
         <!--app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
