@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/mobDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark" />
+    <TextView
+        android:id="@+id/mobForecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Прогноза"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Име"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent" />
+        <TextView
+            android:id="@+id/mobName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Прогноза за болки од артритис"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Вредност"
+            android:textSize="18sp"
+            android:textColor="@color/colorGreen" />
+        <TextView
+            android:id="@+id/mobValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6.7"
+            android:textSize="18sp"
+            android:textColor="@color/colorGreen"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Категорија"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary" />
+        <TextView
+            android:id="@+id/mobCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Поволно"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Вредност на категорија"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary" />
+        <TextView
+            android:id="@+id/mobCategoryValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Опис"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary" />
+        <TextView
+            android:id="@+id/mobText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Постои висок ризик од артритични болки поврзани со времето. Времето ја зголемува веројатноста артритичните болки да бидат посериозни и подолготрајни. Планирајте ги активностите соодветно."
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Линк"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary" />
+        <TextView
+            android:id="@+id/moblink"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="http://......"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+
+</LinearLayout>

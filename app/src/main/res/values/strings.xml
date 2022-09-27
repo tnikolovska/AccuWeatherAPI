@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AccuWeather APIs</string>
+    <string name="hyperlink"><a href="http://www.accuweather.com/mk/mk/skopje/227397/arthritis-weather/227397">Прогноза за Артритис</a></string>
+    <string name="hyperlink1"><a href="http://www.accuweather.com/mk/mk/skopje/227397/migraine-weather/227397">Прогноза за Мигрена</a></string>
+    <string name="hyperlink2"><a href="http://www.accuweather.com/mk/mk/skopje/227397/sinus-weather/227397">Прогноза за Синуси</a></string>
+
+</resources>
