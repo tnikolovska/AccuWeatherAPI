@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.webkit.WebSettings;
+import android.webkit.WebViewClient;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -17,12 +19,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import android.widget.TextView;
+import android.webkit.WebView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private ArrayList<Forecast> forecastArrayList = new ArrayList<>();
     private ListView listView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
         URL forecastUrl = NetworkUtils.buildUrlForForecast();
         new FetchForecastDetails().execute(forecastUrl);
         Log.i(TAG, "onCreate: forecastUrl: " + forecastUrl);
-
-       /* TextView t2 = findViewById(R.id.moblink);
-        t2.setMovementMethod(LinkMovementMethod.getInstance());*/
 
     }
 
@@ -117,12 +116,6 @@ public class MainActivity extends AppCompatActivity {
 
                     String link = resultsObj.getString("MobileLink");
                     forecast.setLink(link);
-
-
-                   /* Log.i(TAG, "parseJSON: date: " + date + " " +
-                            "Min: " + minTemperature + " " +
-                            "Max: " + maxTemperature + " " +
-                            "Link: " + link);*/
 
                     forecastArrayList.add(forecast);
                 }

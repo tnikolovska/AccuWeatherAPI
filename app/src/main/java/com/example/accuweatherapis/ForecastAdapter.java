@@ -2,17 +2,25 @@ package com.example.accuweatherapis;
 
 
 import android.content.Context;
-//import android.support.annotation.NonNull;
 import androidx.annotation.FloatRange;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.AbsoluteLayout;
 import java.util.ArrayList;
-
+import android.text.method.LinkMovementMethod;
+import android.webkit.WebView;
+import android.webkit.WebChromeClient;
 
 public class ForecastAdapter extends ArrayAdapter<Forecast>{
     public ForecastAdapter(Context context, ArrayList<Forecast> forecastArrayList) {
@@ -34,7 +42,7 @@ public class ForecastAdapter extends ArrayAdapter<Forecast>{
         TextView categoryTextView = convertView.findViewById(R.id.mobCategory);
         TextView categoryValueTextView = convertView.findViewById(R.id.mobCategoryValue);
         TextView textTextView = convertView.findViewById(R.id.mobText);
-        TextView linkTextView = convertView.findViewById(R.id.moblink);
+        WebView linkTextView = convertView.findViewById(R.id.moblink);
 
         dateTextView.setText(forecast.getDate());
         nameTextView.setText(forecast.getName());
@@ -43,13 +51,28 @@ public class ForecastAdapter extends ArrayAdapter<Forecast>{
         categoryValueTextView.setText(forecast.getCategoryValue());
         textTextView.setText(forecast.getText());
         if(nameTextView.getText().equals("Прогноза за мигрена")){
-            linkTextView.setText(R.string.hyperlink1);
+            linkTextView = convertView.findViewById(R.id.moblink);
+            linkTextView.setWebViewClient(new WebViewClient());
+            linkTextView.getSettings().setJavaScriptEnabled(true);
+            linkTextView.getSettings().setAppCacheEnabled(true);
+            linkTextView.loadUrl("https://www.accuweather.com/mk/mk/skopje/227397/migraine-weather/227397");
+            linkTextView.setWebChromeClient(new WebChromeClient());
         }
         else if(nameTextView.getText().equals("Прогноза за болки од артритис")){
-            linkTextView.setText(R.string.hyperlink);
+            linkTextView = convertView.findViewById(R.id.moblink);
+            linkTextView.setWebViewClient(new WebViewClient());
+            linkTextView.getSettings().setJavaScriptEnabled(true);
+            linkTextView.getSettings().setAppCacheEnabled(true);
+            linkTextView.loadUrl("https://www.accuweather.com/mk/mk/skopje/227397/arthritis-weather/227397");
+            linkTextView.setWebChromeClient(new WebChromeClient());
         }
         else if(nameTextView.getText().equals("Прогноза за синусна главоболка")){
-            linkTextView.setText(R.string.hyperlink2);
+            linkTextView = convertView.findViewById(R.id.moblink);
+            linkTextView.setWebViewClient(new WebViewClient());
+            linkTextView.getSettings().setJavaScriptEnabled(true);
+            linkTextView.getSettings().setAppCacheEnabled(true);
+            linkTextView.loadUrl("https://www.accuweather.com/mk/mk/skopje/227397/sinus-weather/227397");
+            linkTextView.setWebChromeClient(new WebChromeClient());
         }
 
 
