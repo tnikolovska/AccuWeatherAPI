@@ -51,7 +51,6 @@ public class ForecastAdapter extends ArrayAdapter<Forecast>{
         categoryValueTextView.setText(forecast.getCategoryValue());
         textTextView.setText(forecast.getText());
         if(nameTextView.getText().equals("Прогноза за мигрена")){
-            linkTextView = convertView.findViewById(R.id.moblink);
             linkTextView.setWebViewClient(new WebViewClient());
             linkTextView.getSettings().setJavaScriptEnabled(true);
             linkTextView.getSettings().setAppCacheEnabled(true);
@@ -59,7 +58,6 @@ public class ForecastAdapter extends ArrayAdapter<Forecast>{
             linkTextView.setWebChromeClient(new WebChromeClient());
         }
         else if(nameTextView.getText().equals("Прогноза за болки од артритис")){
-            linkTextView = convertView.findViewById(R.id.moblink);
             linkTextView.setWebViewClient(new WebViewClient());
             linkTextView.getSettings().setJavaScriptEnabled(true);
             linkTextView.getSettings().setAppCacheEnabled(true);
@@ -67,15 +65,12 @@ public class ForecastAdapter extends ArrayAdapter<Forecast>{
             linkTextView.setWebChromeClient(new WebChromeClient());
         }
         else if(nameTextView.getText().equals("Прогноза за синусна главоболка")){
-            linkTextView = convertView.findViewById(R.id.moblink);
             linkTextView.setWebViewClient(new WebViewClient());
             linkTextView.getSettings().setJavaScriptEnabled(true);
             linkTextView.getSettings().setAppCacheEnabled(true);
             linkTextView.loadUrl("https://www.accuweather.com/mk/mk/skopje/227397/sinus-weather/227397");
             linkTextView.setWebChromeClient(new WebChromeClient());
         }
-
-
         return convertView;
 
     }

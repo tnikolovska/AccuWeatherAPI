@@ -31,7 +31,6 @@
             android:text="Date"
             android:textSize="20sp"
             android:textColor="@color/colorPrimaryDark" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -53,7 +52,6 @@
             android:text="Прогноза за болки од артритис"
             android:textSize="18sp"
             android:textColor="@color/colorPrimaryDark" />
-
     </LinearLayout>
 
     <LinearLayout

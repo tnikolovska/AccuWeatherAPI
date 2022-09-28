@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="5 Дневна Прогноза на Дневни Вредности на Индекси за Артритис, Мигрена и Синуси"
+        android:text="5 Дневна Прогноза за Артритис, Мигрена и Синуси"
         android:textSize="23sp"
         android:textColor="@color/purple_500"/>
 
